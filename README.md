@@ -8,3 +8,7 @@ This is a address book application built using React, TypeScript, and Chakra UI.
 2. Run `yarn install`
 3. Run `yarn start` to run the application on a local dev server
 4. Run `yarn test` to run tests
+
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Flaujamie%2Fmybook.git)
