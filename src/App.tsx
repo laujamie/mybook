@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Link,
+} from 'react-router-dom';
+import { Heading, Container } from '@chakra-ui/react';
+import HomeView from './views/HomeView';
+import DetailsView from './views/DetailsView';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxW="container.lg">
+        <Router>
+          <Link to="/">
+            <Heading my="2">MyBook</Heading>
+          </Link>
+          <Switch>
+            <Route path="/person/:id">
+              <DetailsView />
+            </Route>
+            <Route path="/" exact>
+              <HomeView />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
+        </Router>
+      </Container>
     </div>
   );
 }

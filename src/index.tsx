@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+library.add(faArrowRight);
+
+const queryClient = new QueryClient();
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
