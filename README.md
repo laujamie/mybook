@@ -33,7 +33,8 @@ Given more time, I would have implemented some form of pagination or windowing (
 using react-window), to make the performance of the address book more robust. This would
 have taken about an hour to implement. In addition, I would have liked to add a Google Maps widget
 to the details page, to make it more convenient for users to get directions to the person of interest's place.
-This would have taken two hours to implement.
+This would have taken two hours to implement. One last thing that I would have liked to implement
+would be to make the website more responsive for mobile users. This would take about half an hour to implement.
 
 To make this project more robust, I would have added some form of user authentication
 and added a database to store the addresses for each user. This helps to ensure that users' data is not
